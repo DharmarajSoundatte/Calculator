@@ -1,0 +1,33 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <form method="POST" action="/">
+        <label for="num1">Enter the first number:</label>
+        <input type="number" name="num1" id="num1" required>
+        <br>
+        <label for="num2">Enter the second number:</label>
+        <input type="number" name="num2" id="num2" required>
+        <br>
+        <label for="operation">Select operation:</label>
+        <select name="operation" id="operation">
+            <option value="Addition">Addition</option>
+            <option value="Subtraction">Subtraction</option>
+            <option value="Multiplication">Multiplication</option>
+            <option value="Division">Division</option>
+        </select>
+        <br>
+        <input type="submit" value="Calculate">
+    </form>
+    {% if result is not none %}
+        <p>Result: {{ result }}</p>
+    {% endif %}
+</body>
+</html>
